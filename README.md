@@ -5,7 +5,7 @@
 <li>python2</li>
 <li>Tkinter</li>
 <li>requests</li>
-<ul>
+</ul>
 
 <h4>Loading libs</h4>
 <pre><code>sudo pacman -S python2</code></pre>
