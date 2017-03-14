@@ -30,35 +30,36 @@ def Send(ev):
 
 root = Tk()
 
-panelFrame = Frame(root, height=40, bg='gray')
+panelFrame = Frame(root, height=40, bg='white')
 textFrame = Frame(root, height=340, width=640)
 
 panelFrame.pack(side='bottom', fill='x')
 textFrame.pack(side='top', fill='both')
 
-lCode = Label(textFrame, text='Paste your code here', font='Arial 12')
-lCode.place(x=5, y=5, width=150, height=30)
-codeBox = Text(textFrame, font='Arial 10', wrap='word')
+
+lCode = Label(textFrame, text='Your code:', font='Arial 13')
+lCode.place(x=7, y=5, width=70, height=30)
+codeBox = Text(textFrame, font='Arial 10', wrap='word', bg='gray')
 codeBox.place(x=5, y=40, width=630, height=200)
 
 lLang = Label(textFrame, text='Language: ', font='Arial 12')
 lLang.place(x=5, y=250, width=80, height=30)
-langBox = Text(textFrame, font='Arial 12')
+langBox = Text(textFrame, font='Arial 12', bg='gray')
 langBox.place(x=90, y=250, width=150, height=25)
 
 lName = Label(textFrame, text='Name: ', font='Arial 12')
 lName.place(x=5, y=280, width=80, height=30)
-nameBox = Text(textFrame, font='Arial 12')
+nameBox = Text(textFrame, font='Arial 12', bg='gray')
 nameBox.place(x=90, y=280, width=150, height=25)
 
 lPriv = Label(textFrame, text='Private: ', font='Arial 12')
 lPriv.place(x=5, y=310, width=80, height=30)
-privBox = Text(textFrame, font='Arial 12')
+privBox = Text(textFrame, font='Arial 12', bg='gray')
 privBox.place(x=90, y=310, width=150, height=25)
 lPrivI = Label(textFrame, text='0 - public, 1 -unlisted, 2 - private', font='Arial 10')
 lPrivI.place(x=245, y=310, width=200, height=30)
 
-privBox = Text(textFrame, font='Arial 12')
+privBox = Text(textFrame, font='Arial 12', bg='gray')
 privBox.place(x=90, y=310, width=150, height=25)
 
 bSend = Button(panelFrame, text='Load')
@@ -69,7 +70,7 @@ bQuit = Button(panelFrame, text='Quit')
 bQuit.place(x=100, y=5, width=90, height=30)
 bQuit.bind("<Button-1>", Quit)
 
-resBox = Text(panelFrame, font='Arial 12')
+resBox = Text(panelFrame, font='Arial 12', bg='gray')
 resBox.place(x=385, y=8, width=250, height=25)
 
 
