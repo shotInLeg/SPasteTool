@@ -26,8 +26,6 @@ def Send(ev):
     resBox.insert('1.0', r.text)
 
 
-
-
 root = Tk()
 
 panelFrame = Frame(root, height=40, bg='white')
