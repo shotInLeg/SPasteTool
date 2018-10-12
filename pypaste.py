@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # coding: utf8
+import os
 import click
 import requests
 
@@ -41,6 +42,7 @@ def paste(service, file, name, lang, token=PASTEBIN_TOKEN):
         'pastebin': Pastebin(token)
     }
     paste_service = paste_services[service]
+    name = name or os.path.basename(file)
 
     url = paste_service.paste(text=text, name=name, lang=lang)
     return url
@@ -49,7 +51,7 @@ def paste(service, file, name, lang, token=PASTEBIN_TOKEN):
 @click.command()
 @click.argument('file')
 @click.option('--service', default='pastebin', help='Name of paste service.')
-@click.option('--name', default='Paste from pypaste.', help='Name of paste.')
+@click.option('--name', default='', help='Name of paste.')
 @click.option('--lang', default='Python', help='Syntax highlight language.')
 def main(service, file, name, lang):
     print(paste(service, file, name, lang))
